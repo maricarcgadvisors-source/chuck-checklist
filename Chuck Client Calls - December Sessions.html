@@ -1,0 +1,83 @@
+<html lang="en"><head><style>
+@font-face {
+  font-family: "Optimistic";
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url("/fonts/OptimisticAI_VF_Optimized.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Optimistic Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/OptimisticMono_W_TextRegular.woff2") format("woff2");
+}
+:where(html) {
+  font-family: "Optimistic", system-ui, sans-serif;
+}
+:where(code, pre, kbd, samp) {
+  font-family: "Optimistic Mono", ui-monospace, monospace;
+}
+</style><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Chuck Client Calls - December Sessions</title>
+<style>
+*{box-sizing:border-box}body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;margin:0;background:#f6f3ef;color:#1f1a17}
+.wrap{max-width:820px;margin:0 auto;padding:24px 16px 60px}h1{font-size:28px;margin:6px 0 4px}.sub{color:#6b625c;margin:0 0 18px}
+.top{background:#fff;border-radius:16px;padding:18px;box-shadow:0 2px 12px rgba(0,0,0,.06);margin-bottom:16px}
+.bar{height:10px;background:#eee;border-radius:99px;overflow:hidden}.bar i{display:block;height:100%;background:#2e7d5b;width:0;transition:width .3s}
+.card{background:#fff;border-radius:16px;padding:18px;margin-bottom:14px;box-shadow:0 2px 12px rgba(0,0,0,.06)}
+.card h2{margin:0 0 2px}.date{color:#b45309;font-weight:700;margin:0 0 12px}h3{font-size:15px;margin:18px 0 8px;border-bottom:1px solid #eee;padding-bottom:6px}
+label{display:flex;gap:10px;align-items:flex-start;padding:9px 6px;border-radius:10px;cursor:pointer}label:hover{background:#faf7f2}
+input{width:20px;height:20px;accent-color:#2e7d5b;margin-top:1px;flex-shrink:0}label span{line-height:1.4}.done span{text-decoration:line-through;color:#8a837d}
+.pill{display:inline-block;background:#eef7f1;color:#2e7d5b;padding:4px 10px;border-radius:99px;font-size:13px;font-weight:700}
+.btns{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}button{border:1px solid #ddd;background:#fff;padding:8px 12px;border-radius:99px;cursor:pointer}
+.note{background:#fff7e6;border:1px solid #f2d9a0;padding:14px 18px;border-radius:16px;margin-bottom:16px}
+footer{color:#888;font-size:13px;text-align:center;margin-top:20px}
+</style></head><body><div class="wrap">
+<h1>Chuck Client Calls - December Sessions</h1><p class="sub">Pre-session, survey and post-session checklist. Ticks save automatically on this device / browser.</p>
+<div class="top"><div style="display:flex;justify-content:space-between;align-items:center;gap:10px"><b>Overall progress</b><span class="pill" id="overallText">0% complete - 0/42 done</span></div><div class="bar" style="margin-top:10px"><i id="overallBar" style="width: 0%;"></i></div>
+<div class="btns"><button onclick="resetAll()">Reset all</button></div></div>
+<div class="note"><b>For reference:</b> 3PG and SXA were Nov 16 and 17.</div>
+<div id="app"><div class="card"><h2>Collins</h2><p class="date">Dec 8 - 0/14 done - 0%</p><div class="bar"><i style="width:0%"></i></div><h3>Pre-Session - Logistics</h3><label><input type="checkbox"><span>Calendar invite sent and confirmed</span></label><label><input type="checkbox"><span>Time and location confirmed</span></label><label><input type="checkbox"><span>Attendees confirmed</span></label><h3>Pre-Session - Meeting Agenda</h3><label><input type="checkbox"><span>Meeting agenda table of contents finalize</span></label><label><input type="checkbox"><span>Meeting agenda draft</span></label><label><input type="checkbox"><span>Meeting agenda finalize and send to the team</span></label><h3>Pre-Session Survey</h3><label><input type="checkbox"><span>Decide: Pre-session survey OR during-session discussion</span></label><label><input type="checkbox"><span>If pre-session: Create Typeform survey</span></label><label><input type="checkbox"><span>If pre-session: Send Typeform survey to the team</span></label><label><input type="checkbox"><span>If during session: Discuss survey topics during the session</span></label><h3>Post-Session</h3><label><input type="checkbox"><span>Meeting session recap</span></label><label><input type="checkbox"><span>Action items</span></label><label><input type="checkbox"><span>Update MOE if needed</span></label><label><input type="checkbox"><span>Finalize the dates for next year: 3 quarterlies and 1 annual session</span></label></div><div class="card"><h2>Wesco and Kolb</h2><p class="date">Dec 9 - 0/14 done - 0%</p><div class="bar"><i style="width:0%"></i></div><h3>Pre-Session - Logistics</h3><label><input type="checkbox"><span>Calendar invite sent and confirmed</span></label><label><input type="checkbox"><span>Time and location confirmed</span></label><label><input type="checkbox"><span>Attendees confirmed</span></label><h3>Pre-Session - Meeting Agenda</h3><label><input type="checkbox"><span>Meeting agenda table of contents finalize</span></label><label><input type="checkbox"><span>Meeting agenda draft</span></label><label><input type="checkbox"><span>Meeting agenda finalize and send to the team</span></label><h3>Pre-Session Survey</h3><label><input type="checkbox"><span>Decide: Pre-session survey OR during-session discussion</span></label><label><input type="checkbox"><span>If pre-session: Create Typeform survey</span></label><label><input type="checkbox"><span>If pre-session: Send Typeform survey to the team</span></label><label><input type="checkbox"><span>If during session: Discuss survey topics during the session</span></label><h3>Post-Session</h3><label><input type="checkbox"><span>Meeting session recap</span></label><label><input type="checkbox"><span>Action items</span></label><label><input type="checkbox"><span>Update MOE if needed</span></label><label><input type="checkbox"><span>Finalize the dates for next year: 3 quarterlies and 1 annual session</span></label></div><div class="card"><h2>Seneca</h2><p class="date">Dec 10 - 0/14 done - 0%</p><div class="bar"><i style="width:0%"></i></div><h3>Pre-Session - Logistics</h3><label><input type="checkbox"><span>Calendar invite sent and confirmed</span></label><label><input type="checkbox"><span>Time and location confirmed</span></label><label><input type="checkbox"><span>Attendees confirmed</span></label><h3>Pre-Session - Meeting Agenda</h3><label><input type="checkbox"><span>Meeting agenda table of contents finalize</span></label><label><input type="checkbox"><span>Meeting agenda draft</span></label><label><input type="checkbox"><span>Meeting agenda finalize and send to the team</span></label><h3>Pre-Session Survey</h3><label><input type="checkbox"><span>Decide: Pre-session survey OR during-session discussion</span></label><label><input type="checkbox"><span>If pre-session: Create Typeform survey</span></label><label><input type="checkbox"><span>If pre-session: Send Typeform survey to the team</span></label><label><input type="checkbox"><span>If during session: Discuss survey topics during the session</span></label><h3>Post-Session</h3><label><input type="checkbox"><span>Meeting session recap</span></label><label><input type="checkbox"><span>Action items</span></label><label><input type="checkbox"><span>Update MOE if needed</span></label><label><input type="checkbox"><span>Finalize the dates for next year: 3 quarterlies and 1 annual session</span></label></div></div>
+<footer>Standalone version - works without Meta, no login needed. Share the file or link.</footer>
+</div>
+<script>
+const sessions=[{id:"collins",title:"Collins",date:"Dec 8"},{id:"wesco",title:"Wesco and Kolb",date:"Dec 9"},{id:"seneca",title:"Seneca",date:"Dec 10"}];
+const groups=[
+{title:"Pre-Session - Logistics",items:["Calendar invite sent and confirmed","Time and location confirmed","Attendees confirmed"]},
+{title:"Pre-Session - Meeting Agenda",items:["Meeting agenda table of contents finalize","Meeting agenda draft","Meeting agenda finalize and send to the team"]},
+{title:"Pre-Session Survey",items:["Decide: Pre-session survey OR during-session discussion","If pre-session: Create Typeform survey","If pre-session: Send Typeform survey to the team","If during session: Discuss survey topics during the session"]},
+{title:"Post-Session",items:["Meeting session recap","Action items","Update MOE if needed","Finalize the dates for next year: 3 quarterlies and 1 annual session"]}
+];
+let state={}; try{state=JSON.parse(localStorage.getItem("chuck-checklist-v1")||"{}")}catch(e){state={}}
+function key(s,g,i){return s+"|"+g+"|"+i}
+function save(){localStorage.setItem("chuck-checklist-v1",JSON.stringify(state));renderProgress()}
+function render(){
+ const app=document.getElementById("app"); app.innerHTML="";
+ sessions.forEach(s=>{
+  const card=document.createElement("div"); card.className="card";
+  let total=0,done=0; groups.forEach((g,gi)=>g.items.forEach((it,ii)=>{total++; if(state[key(s.id,gi,ii)])done++}));
+  const pct=total?Math.round(done/total*100):0;
+  card.innerHTML="<h2>"+s.title+"</h2><p class='date'>"+s.date+" - "+done+"/"+total+" done - "+pct+"%</p><div class='bar'><i style='width:"+pct+"%'></i></div>";
+  groups.forEach((g,gi)=>{
+   const h=document.createElement("h3"); h.textContent=g.title; card.appendChild(h);
+   g.items.forEach((it,ii)=>{
+    const l=document.createElement("label"); if(state[key(s.id,gi,ii)])l.className="done";
+    const c=document.createElement("input"); c.type="checkbox"; c.checked=!!state[key(s.id,gi,ii)];
+    c.onchange=()=>{state[key(s.id,gi,ii)]=c.checked; save(); render();};
+    const sp=document.createElement("span"); sp.textContent=it; l.append(c,sp); card.appendChild(l);
+   });
+  });
+  app.appendChild(card);
+ });
+ renderProgress();
+}
+function renderProgress(){
+ let t=0,d=0; sessions.forEach(s=>groups.forEach((g,gi)=>g.items.forEach((_,ii)=>{t++; if(state[key(s.id,gi,ii)])d++})));
+ const p=t?Math.round(d/t*100):0; document.getElementById("overallBar").style.width=p+"%"; document.getElementById("overallText").textContent=p+"% complete - "+d+"/"+t+" done";
+}
+function resetAll(){if(confirm("Reset all checkmarks?")){state={};save();render();}}
+render();
+</script><script>(function(){var loc=location.href.replace(/#.*$/,"");var ATTR_NAMES=["data-product-id","data-productid","data-product_id","product-id","productid","product_id","data-source-entity-id","source-entity-id","source_entity_id","data-product","data-metadata","data-meta"];var DATASET_KEYS=["productId","productid","product_id","sourceEntityId","sourceentityid","source_entity_id","product","metadata","meta"];function readProductId(value){if(typeof value!=="string"||value.length===0)return null;if(/^[0-9]{6,}$/.test(value))return value;var match=value.match(/(?:product(?:_|-)?id|source(?:_|-)?entity(?:_|-)?id)["'=:\s]+([0-9]{6,})/i);return match?match[1]:null}function extractProductId(start){for(var node=start;node&&node!==document.body;node=node.parentElement){for(var i=0;i<ATTR_NAMES.length;i++){var attrValue=node.getAttribute&&node.getAttribute(ATTR_NAMES[i]);var attrProductId=readProductId(attrValue);if(attrProductId)return attrProductId}var dataset=node.dataset||null;if(dataset){for(var j=0;j<DATASET_KEYS.length;j++){var dataValue=dataset[DATASET_KEYS[j]];var dataProductId=readProductId(dataValue);if(dataProductId)return dataProductId}}}return null}function isInlineMediaSlotElement(node){return !!(node&&node.getAttribute&&node.getAttribute("data-clippy-inline-media-slot")!==null)}function findInlineMediaSlot(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(isInlineMediaSlotElement(node))return node}return null}function readInlineMediaUrl(node){if(!node)return null;return node.getAttribute&&((node.getAttribute("data-clippy-inline-media-url")||node.getAttribute("data-url")||node.getAttribute("data_url")))||node.href||null}function stripHash(url){return String(url).replace(/#.*$/,"")}function urlsMatch(a,b){if(!a||!b)return false;try{return stripHash(new URL(a,loc).href)===stripHash(new URL(b,loc).href)}catch(_){return stripHash(a)===stripHash(b)}}function isFirstPartyReelUrl(value){try{var url=new URL(value,loc);if(url.protocol!=="https:")return false;var host=url.hostname.toLowerCase();var supported=host==="instagram.com"||host.endsWith(".instagram.com")||host==="facebook.com"||host.endsWith(".facebook.com");return supported&&/\/reels?\//i.test(url.pathname)}catch(_){return false}}function isInlineMediaUrlClick(node,href){var slot=findInlineMediaSlot(node);if(!slot)return false;var slotUrl=readInlineMediaUrl(slot);if(slotUrl)return urlsMatch(href,slotUrl);return isFirstPartyReelUrl(href)}function findDataHref(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(node.getAttribute){var href=node.getAttribute("data-href")||node.getAttribute("data-url");if(href)return{href:href,node:node}}}return null}var nativeOpen=window.open;window.open=function(url){if(parent!==window&&typeof url==="string"&&/^https?:\/\//.test(url)){parent.postMessage({type:"ecto:usercontent-link-click",href:url},"*");return null}return nativeOpen?nativeOpen.apply(window,arguments):null};document.addEventListener("click",function(e){var target=e.target instanceof Element?e.target:null;if(!target)return;if(parent===window)return;var a=target.closest?target.closest("a[href]"):null;if(a&&a.href&&/^https?:\/\//.test(a.href)&&a.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(a,a.href))return;var productId=extractProductId(target)||extractProductId(a);if(productId){e.preventDefault();parent.postMessage({type:"ecto-artifact-link-click",productId:productId},"*");return}e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:a.href},"*");return}var dataHref=findDataHref(target);if(dataHref&&/^https?:\/\//.test(dataHref.href)&&dataHref.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(dataHref.node,dataHref.href))return;e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:dataHref.href},"*")}},true)})();</script><script>(function(){var FOCUS_TYPE="ecto:artifact-focus-request";var CLOSE_TYPE="ecto:artifact-close-request";function focusArtifactDocument(){var body=document.body;if(!body)return;try{window.focus();}catch(e){}if(!body.hasAttribute("tabindex"))body.setAttribute("tabindex","-1");try{body.focus({preventScroll:true});}catch(e){try{body.focus();}catch(e2){}}}window.addEventListener("message",function(event){if(event.source!==window.parent)return;var data=event.data;if(!data||typeof data!=="object"||data.type!==FOCUS_TYPE)return;if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",focusArtifactDocument,{once:true});return;}focusArtifactDocument();});window.addEventListener("keydown",function(event){if(event.key!=="Escape")return;window.setTimeout(function(){if(event.defaultPrevented)return;window.parent.postMessage({type:CLOSE_TYPE},"*");},0);});})();</script>
+</body></html>
